@@ -21,7 +21,8 @@ export default function NameList({ names }: NameListProps) {
 
     return (
         <div className="p-4">
-            <h2 className="text-2xl font-bold mb-4">قائمة الاسماء</h2>
+            <h2 className="text-2xl font-bold mb-1">احرار صيدنايا</h2>
+            <p className="mb-4">الرجاء ادخال الاسم او الكنية</p>
             <SearchBar searchTerm={searchTerm} onSearchChange={setSearchTerm} />
             {filteredNames.length > 0 ? (
                 <ul className="list-disc list-inside space-y-2">

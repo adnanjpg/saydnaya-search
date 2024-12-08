@@ -13,8 +13,9 @@ export default function NameList({ names }: NameListProps) {
     const filteredNames = useMemo(() => {
         // Use a Set to filter out duplicates
         const uniqueNames = Array.from(new Set(names.map(name => name.trim())));
+        const normalizedSearchTerm = searchTerm.replace(/\s+/g, '').toLowerCase();
         return uniqueNames.filter((name) =>
-            name.toLowerCase().includes(searchTerm.toLowerCase())
+            name.replace(/\s+/g, '').toLowerCase().includes(normalizedSearchTerm)
         );
     }, [names, searchTerm]);
 

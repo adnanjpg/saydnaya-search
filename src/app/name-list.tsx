@@ -12,7 +12,7 @@ export default function NameList({ names }: NameListProps) {
 
     const filteredNames = useMemo(() => {
         // Use a Set to filter out duplicates
-        const uniqueNames = Array.from(new Set(names));
+        const uniqueNames = Array.from(new Set(names.map(name => name.trim())));
         return uniqueNames.filter((name) =>
             name.toLowerCase().includes(searchTerm.toLowerCase())
         );

@@ -24,7 +24,7 @@ export default function NameList({ names }: NameListProps) {
                 <ul className="list-disc list-inside space-y-2">
                     {filteredNames.map((name, index) => (
                         <li key={index} className="text-lg">
-                            {name}
+                            {index + 1}. {name}
                         </li>
                     ))}
                 </ul>
